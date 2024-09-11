@@ -1,0 +1,60 @@
+<header>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col-3">
+                <img src="../../../assets/images/flip.png" class="img-fluid" alt="" width="100px">
+            </div>
+            <div class="col-4">
+                <form class="d-flex form">
+                    <i class="fa fa-search"></i>
+                    <input class="form-control me-2" name="sear" type="search" placeholder="Search for Products , Brands and More" [ngModel]="searchtext">
+                  </form>
+            </div>
+            <div class="col-5 d-flex justify-content-between">
+               <div class="col1">
+               <span class="user"> <i class="fa-regular fa-user"></i></span>
+               
+              <strong data-bs-toggle="modal" data-bs-target="#exampleModal">Login</strong>
+               </div>
+               <div class="col2" routerLink="/product"> <span class="tot">{{totalcarditem}}</span><i class="fa-sharp fa-solid fa-cart-plus me-1"></i><strong>Cart</strong></div>
+               <div class="col3"> <i class="fa-sharp fa-solid fa-house-user me-1"></i> <strong>Become a Seller</strong></div>
+               <div class="col3"><i class="fa-duotone fa-solid fa-ellipsis-vertical"></i></div>
+            </div>
+        </div>
+    
+    </div>
+</header>
+<router-outlet></router-outlet>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row ">
+            <div class="col-6 bg-primary">
+                <h3 class="text-center p-4 text-white ">Login</h3>
+               <p class="text-white p-3">
+                Get access to your Orders,<br>
+                 Wishlist and Recommendations
+               </p>
+               <img src="../../../assets/images/login.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-6 p-3 mb-5">
+                <input type="email" class="num" name="email" placeholder="Enter Email/Mobile Number.">
+
+                <p class="mt-5">By continuing, you agree to Flipkart's <a href="">Terms of Use</a> and <a href="">Privacy Policy</a>.</p>
+
+                <button class="btn w-100 mt-5 color p-2">Request OTP</button>
+                <p class="mt-3"><a href="#">New to Flipkart? Create an account</a></p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,21 @@
+.col img{
+    width: 90px;
+}
+.subheader{
+    box-shadow: 0 0 10px gray;
+    padding: 10px;
+}
+.card img{
+    display: inline-block;
+    margin-left: 0px;
+    padding: 8px;
+}
+.card{
+    border: none;
+    box-shadow: 0 0 10px gray;
+}
+.card-title{
+    width: fit-content;
+    font-size: 18px;
+    
+}

@@ -1,0 +1,49 @@
+<div class="container mt-5" *ngIf="products.length!=0">
+    <table class="table border border-2">
+        <tr class="">
+            <th>Sr.No</th>
+            <th>Product Name</th>
+            <th>Product Image</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Qunatity</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let dat of products let i=index" class="border border-1">
+          <td>{{i+1}}</td>
+          <td>{{dat.title| slice:0:20}}</td>
+          <td><img src={{dat.image}} alt="" style="width: 50px; height: 50px;"></td>
+          <td>{{dat.description|slice:0:30}}</td>
+          <td>{{dat.price| currency:'INR'}}</td>
+          <td><b>1</b></td>
+          <td>200</td>
+          <td><i class="fa-sharp fa-solid fa-trash" style="color: #e21227;" (click)="remove(dat)"></i></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+            <td class="btn btn-danger" (click)="emptyCard()">Empty card</td>
+            <td class="btn btn-primary ms-5">shop now</td>
+            <td class="btn bg ms-5">Checkout</td>
+        </tr>
+    </table>
+</div>
+
+<ng-container *ngIf="products.length==0" >
+    <br>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col text-center mt-3">
+                    <img src="../../../assets/images/empty-cart.png" class="img-fluid" width="300px" height="300px" alt="">
+                    <h5 class="mb-3">Your Cart is Empty</h5>
+                    <h6 class="mb-3">Add Item To it now</h6>
+                    <button class="btn bg" routerLink="/card">shop now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ng-container>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,17 @@
+.bg{
+    background-color: rgb(250, 90, 32);
+    color: white;
+}
+h5{
+    color: gray;
+    font-family: sans-serif;
+}
+h6{
+    color: rgb(67, 66, 66);
+    font-family: Courier, monospace;
+}
+.row{
+    background-color:rgb(249, 249, 248);
+    width: 1000px;
+    height: 340px;
+}

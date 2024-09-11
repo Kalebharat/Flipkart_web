@@ -1,0 +1,13 @@
+.footer{
+    /* height: 200px; */
+    /* overflow: hidden; */
+}
+ul{
+    padding: 10px;
+}
+ul li{
+    list-style: none;
+}
+h6{
+    color: gray;
+}

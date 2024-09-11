@@ -1,0 +1,70 @@
+<div class="subheader mt-3">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <img src="../../../assets/images/top.png" alt="">
+                Top Offer
+            </div>
+            <div class="col">
+                <img src="../../../assets/images/mobiles.png" alt="">
+                Mobiles & <br>
+                Tablets
+            </div>
+            <div class="col">
+                <img src="../../../assets/images/Tvs.png" alt="">
+                TVs & <br>
+                Appliances
+            </div>
+            <div class="col" (click)="filteritem('electronics')">
+                <img src="../../../assets/images/Electri.png" alt="">
+                Electronics
+            </div>
+            <div class="col" (click)="filteritem('fashion')">
+                <img src="../../../assets/images/fashion.png" alt="">
+                Fashion
+            </div>
+            <div class="col" (click)="filteritem('jewelery')">
+                <img src="../../../assets/images/touy.png" alt="">
+                Beauty
+            </div>
+            <div class="col">
+                <img src="../../../assets/images/home.png" alt="">
+                Home & <br>
+                Kitchen
+            </div>
+            <div class="col">
+                <img src="../../../assets/images/Frunch.png" alt="">
+                Furniture
+            </div>
+            <div class="col">
+                <img src="../../../assets/images/travel.png" alt="">
+                Travel
+            </div>
+            <div class="col" (click)="filteritem('')">
+                <img src="../../../assets/images/grocery.png" alt="">
+                Grocery
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-slide-img></app-slide-img>
+
+<div class="container mt-4">
+    <div class="row d-inline-block text-center" *ngFor="let item of filtercategory ">
+        <div class="col-3 mt-3 me-3">
+            <div class="card" style="width: 16rem;">
+                <img src={{item.image}} class="card-img-top" width="50px" height="150px" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.title | slice:0:20}}</h5>
+                  <p class="card-text " style="font-size: small;">{{item.description | slice:0:50}}</p>
+                  <p class="card-text"><b>{{item.price| currency:'INR'}}</b><del class="ms-1">120</del><span class="text-success ms-1"> 20% Off.</span></p>
+                  <p class="d-flex justify-content-between">Count:{{item.rating.count}} <span class="btn btn-primary"> Rate:{{item.rating.rate}}</span> </p>
+                  <a href="#" class="btn btn-outline-warning" (click)="addCard(item)">Add to cart</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+<app-foooter></app-foooter>
+<!-- <app-card-page></app-card-page> -->
